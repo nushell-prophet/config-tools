@@ -35,92 +35,110 @@ $env.config.completions.external.completer = {|spans|
   | from json
 }
 $env.config.table.trim.truncating_suffix = "..."
-$env.config.color_config.shape_bool = "light_cyan"
-$env.config.color_config.float = "white"
 $env.config.color_config.int = "white"
-$env.config.color_config.string = "white"
-$env.config.color_config.shape_range = "yellow_bold"
-$env.config.color_config.shape_filepath = "cyan"
 $env.config.color_config.shape_matching_brackets.attr = "u"
-$env.config.color_config.binary = "white"
 $env.config.color_config.shape_operator = "yellow"
-$env.config.color_config.shape_directory = "cyan"
-$env.config.color_config.shape_external = "cyan"
+$env.config.color_config.shape_float = "purple_bold"
+$env.config.color_config.row_index = "green_bold"
 $env.config.color_config.shape_record = "cyan_bold"
+$env.config.color_config.range = "white"
+$env.config.color_config.shape_filepath = "cyan"
+$env.config.color_config.bool = "light_cyan"
+$env.config.color_config.duration = "white"
+$env.config.color_config.shape_table = "blue_bold"
+$env.config.color_config.date = "purple"
+$env.config.color_config.cell-path = "white"
+$env.config.color_config.list = "white"
+$env.config.color_config.shape_and = "purple_bold"
 $env.config.color_config.shape_garbage.fg = "white"
 $env.config.color_config.shape_garbage.bg = "red"
 $env.config.color_config.shape_garbage.attr = "b"
-$env.config.color_config.shape_raw_string = "light_purple"
-$env.config.color_config.shape_flag = "blue_bold"
-$env.config.color_config.shape_closure = "green_bold"
-$env.config.color_config.filesize = "cyan"
-$env.config.color_config.shape_datetime = "cyan_bold"
-$env.config.color_config.shape_table = "blue_bold"
-$env.config.color_config.shape_internalcall = "cyan_bold"
-$env.config.color_config.date = "purple"
-$env.config.color_config.shape_externalarg = "green_bold"
-$env.config.color_config.shape_and = "purple_bold"
+$env.config.color_config.header = "green_bold"
+$env.config.color_config.nothing = "white"
+$env.config.color_config.separator = "white"
+$env.config.color_config.shape_int = "purple_bold"
 $env.config.color_config.search_result.bg = "red"
 $env.config.color_config.search_result.fg = "white"
-$env.config.color_config.shape_block = "blue_bold"
-$env.config.color_config.bool = "light_cyan"
-$env.config.color_config.shape_or = "purple_bold"
-$env.config.color_config.cell-path = "white"
-$env.config.color_config.shape_custom = "green"
-$env.config.color_config.block = "white"
-$env.config.color_config.shape_external_resolved = "light_yellow_bold"
 $env.config.color_config.shape_signature = "green_bold"
-$env.config.color_config.shape_variable = "purple"
-$env.config.color_config.shape_literal = "blue"
-$env.config.color_config.record = "white"
-$env.config.color_config.shape_keyword = "cyan_bold"
-$env.config.color_config.header = "green_bold"
-$env.config.color_config.shape_nothing = "light_cyan"
+$env.config.color_config.shape_range = "yellow_bold"
 $env.config.color_config.shape_list = "cyan_bold"
-$env.config.color_config.empty = "blue"
-$env.config.color_config.leading_trailing_space_bg.attr = "n"
-$env.config.color_config.nothing = "white"
-$env.config.color_config.shape_pipe = "purple_bold"
-$env.config.color_config.shape_globpattern = "cyan_bold"
-$env.config.color_config.shape_glob_interpolation = "cyan_bold"
-$env.config.color_config.separator = "white"
-$env.config.color_config.shape_redirection = "purple_bold"
-$env.config.color_config.shape_float = "purple_bold"
-$env.config.color_config.shape_vardecl = "purple"
-$env.config.color_config.range = "white"
-$env.config.color_config.shape_string = "green"
-$env.config.color_config.shape_int = "purple_bold"
-$env.config.color_config.hints = "dark_gray"
-$env.config.color_config.shape_binary = "purple_bold"
+$env.config.color_config.block = "white"
+$env.config.color_config.shape_bool = "light_cyan"
 $env.config.color_config.shape_match_pattern = "green"
-$env.config.color_config.row_index = "green_bold"
+$env.config.color_config.shape_vardecl = "purple"
+$env.config.color_config.shape_raw_string = "light_purple"
+$env.config.color_config.shape_custom = "green"
+$env.config.color_config.shape_variable = "purple"
+$env.config.color_config.shape_pipe = "purple_bold"
+$env.config.color_config.record = "white"
+$env.config.color_config.binary = "white"
+$env.config.color_config.shape_redirection = "purple_bold"
+$env.config.color_config.shape_external_resolved = "light_yellow_bold"
+$env.config.color_config.filesize = "cyan"
+$env.config.color_config.shape_keyword = "cyan_bold"
+$env.config.color_config.shape_glob_interpolation = "cyan_bold"
 $env.config.color_config.shape_string_interpolation = "cyan_bold"
-$env.config.color_config.list = "white"
-$env.config.color_config.duration = "white"
-$env.config.explore.status.error.fg = "white"
-$env.config.explore.status.error.bg = "red"
-$env.config.explore.command_bar_text.fg = "#C4C9C6"
-$env.config.explore.highlight.fg = "black"
-$env.config.explore.highlight.bg = "yellow"
-$env.config.explore.selected_cell.bg = "light_blue"
+$env.config.color_config.shape_flag = "blue_bold"
+$env.config.color_config.shape_or = "purple_bold"
+$env.config.color_config.empty = "blue"
+$env.config.color_config.shape_internalcall = "cyan_bold"
+$env.config.color_config.shape_externalarg = "green_bold"
+$env.config.color_config.shape_literal = "blue"
+$env.config.color_config.shape_binary = "purple_bold"
+$env.config.color_config.shape_datetime = "cyan_bold"
+$env.config.color_config.hints = "dark_gray"
+$env.config.color_config.shape_string = "green"
+$env.config.color_config.leading_trailing_space_bg.attr = "n"
+$env.config.color_config.string = "white"
+$env.config.color_config.shape_external = "cyan"
+$env.config.color_config.float = "white"
+$env.config.color_config.shape_nothing = "light_cyan"
+$env.config.color_config.shape_closure = "green_bold"
+$env.config.color_config.shape_directory = "cyan"
+$env.config.color_config.shape_globpattern = "cyan_bold"
+$env.config.color_config.shape_block = "blue_bold"
 $env.config.explore.status_bar_background.fg = "#1D1F21"
 $env.config.explore.status_bar_background.bg = "#C4C9C6"
+$env.config.explore.selected_cell.bg = "light_blue"
+$env.config.explore.command_bar_text.fg = "#C4C9C6"
+$env.config.explore.status.error.fg = "white"
+$env.config.explore.status.error.bg = "red"
+$env.config.explore.highlight.fg = "black"
+$env.config.explore.highlight.bg = "yellow"
 
 
 
 #hooks
 
-$env.config.hooks = {pre_prompt: [{ null }], pre_execution: [{ null }], env_change: {PWD: [{ |before, after|
+$env.config.hooks = {
+    pre_prompt: [
+        { null }
+    ],
+    pre_execution: [
+        { null }
+    ],
+    env_change: {
+        PWD: [
+            { |before, after|
         #print $"before: [($before)], after: [($after)]"
         # print ($env.LS_COLORS)
         print (ls | sort-by type name -i | grid -c -i )
         # null
-      }, {condition: {|_, after| not ($after | path join 'toolkit.nu' | path exists)}, code: "hide toolkit"}, {condition: {|_, after| $after | path join 'toolkit.nu' | path exists}, code: "
+      },
+            {
+                condition: {|_, after| not ($after | path join 'toolkit.nu' | path exists)},
+                code: "hide toolkit"
+            },
+            {
+                condition: {|_, after| $after | path join 'toolkit.nu' | path exists},
+                code: "
         print $'(ansi default_underline)(ansi default_bold)toolkit(ansi reset) module (ansi green_italic)detected(ansi reset)...'
         print $'(ansi yellow_italic)activating(ansi reset) (ansi default_underline)(ansi default_bold)toolkit(ansi reset) module with `(ansi default_dimmed)(ansi default_italic)use toolkit.nu(ansi reset)`'
         use toolkit.nu
         # overlay use --prefix toolkit.nu
-        "}, {|before, _|
+        "
+            },
+            {|before, _|
         if $before == null {
             let file = ($nu.home-path | path join ".local" "share" "nushell" "startup-times.nuon")
             if not ($file | path exists) {
@@ -139,7 +157,10 @@ $env.config.hooks = {pre_prompt: [{ null }], pre_execution: [{ null }], env_chan
                 bytes_loaded: (view files | get size | math sum)
             } | collect { save --force $file }
         }
-      }]}, display_output: {
+      }
+        ]
+    },
+    display_output: {
             metadata access {|meta| match $meta.content_type? {
             "application/x-nuscript" | "application/x-nuon" | "text/x-nushell" => { nu-highlight },
             "application/json" => { ^bat --language=json --color=always --style=plain --paging=never },
@@ -147,19 +168,122 @@ $env.config.hooks = {pre_prompt: [{ null }], pre_execution: [{ null }], env_chan
             }
         }
         | if (term size).columns >= 100 { table -e } else { table }
-    }, command_not_found: { null }}
+    },
+    command_not_found: { null }
+}
 
 #menus
 
-$env.config.menus ++= [{name: completion_menu, marker: "| ", only_buffer_difference: false, style: {text: green, selected_text: {attr: r}, description_text: yellow, match_text: {attr: u}, selected_match_text: {attr: ur}}, type: {layout: columnar, columns: 4, col_width: 20, col_padding: 2}, source: null}]
+$env.config.menus ++= [{
+    name: completion_menu,
+    marker: "| ",
+    only_buffer_difference: false,
+    style: {
+        text: green,
+        selected_text: {
+            attr: r
+        },
+        description_text: yellow,
+        match_text: {
+            attr: u
+        },
+        selected_match_text: {
+            attr: ur
+        }
+    },
+    type: {
+        layout: columnar,
+        columns: 4,
+        col_width: 20,
+        col_padding: 2
+    },
+    source: null
+}]
 
-$env.config.menus ++= [{name: ide_completion_menu, marker: "| ", only_buffer_difference: false, style: {text: green, selected_text: {attr: r}, description_text: yellow, match_text: {attr: u}, selected_match_text: {attr: ur}}, type: {layout: ide, min_completion_width: 0, max_completion_width: 50, max_completion_height: 10, padding: 0, border: true, cursor_offset: 0, description_mode: prefer_right, min_description_width: 0, max_description_width: 50, max_description_height: 10, description_offset: 1, correct_cursor_pos: false}, source: null}]
+$env.config.menus ++= [{
+    name: ide_completion_menu,
+    marker: "| ",
+    only_buffer_difference: false,
+    style: {
+        text: green,
+        selected_text: {
+            attr: r
+        },
+        description_text: yellow,
+        match_text: {
+            attr: u
+        },
+        selected_match_text: {
+            attr: ur
+        }
+    },
+    type: {
+        layout: ide,
+        min_completion_width: 0,
+        max_completion_width: 50,
+        max_completion_height: 10,
+        padding: 0,
+        border: true,
+        cursor_offset: 0,
+        description_mode: prefer_right,
+        min_description_width: 0,
+        max_description_width: 50,
+        max_description_height: 10,
+        description_offset: 1,
+        correct_cursor_pos: false
+    },
+    source: null
+}]
 
-$env.config.menus ++= [{name: history_menu, marker: "? ", only_buffer_difference: true, style: {text: green, selected_text: green_reverse, description_text: yellow}, type: {layout: list, page_size: 10}, source: null}]
+$env.config.menus ++= [{
+    name: history_menu,
+    marker: "? ",
+    only_buffer_difference: true,
+    style: {
+        text: green,
+        selected_text: green_reverse,
+        description_text: yellow
+    },
+    type: {
+        layout: list,
+        page_size: 10
+    },
+    source: null
+}]
 
-$env.config.menus ++= [{name: help_menu, marker: "? ", only_buffer_difference: true, style: {text: green, selected_text: green_reverse, description_text: yellow}, type: {layout: description, columns: 4, col_width: 20, col_padding: 2, selection_rows: 4, description_rows: 10}, source: null}]
+$env.config.menus ++= [{
+    name: help_menu,
+    marker: "? ",
+    only_buffer_difference: true,
+    style: {
+        text: green,
+        selected_text: green_reverse,
+        description_text: yellow
+    },
+    type: {
+        layout: description,
+        columns: 4,
+        col_width: 20,
+        col_padding: 2,
+        selection_rows: 4,
+        description_rows: 10
+    },
+    source: null
+}]
 
-$env.config.menus ++= [{name: all_history_menu, marker: "? ", only_buffer_difference: true, style: {text: green, selected_text: green_reverse}, type: {layout: list, page_size: 10}, source: {|buffer, position|
+$env.config.menus ++= [{
+    name: all_history_menu,
+    marker: "? ",
+    only_buffer_difference: true,
+    style: {
+        text: green,
+        selected_text: green_reverse
+    },
+    type: {
+        layout: list,
+        page_size: 10
+    },
+    source: {|buffer, position|
                 history
                 | select command exit_status
                 | where exit_status != 1
@@ -167,17 +291,44 @@ $env.config.menus ++= [{name: all_history_menu, marker: "? ", only_buffer_differ
                 | each {|it| {value: $it.command } }
                 | reverse
                 | uniq
-            }}]
+            }
+}]
 
-$env.config.menus ++= [{name: vars_menu, marker: "# ", only_buffer_difference: true, style: {text: green, selected_text: green_reverse, description_text: yellow}, type: {layout: list, page_size: 10}, source: {|buffer, position|
+$env.config.menus ++= [{
+    name: vars_menu,
+    marker: "# ",
+    only_buffer_difference: true,
+    style: {
+        text: green,
+        selected_text: green_reverse,
+        description_text: yellow
+    },
+    type: {
+        layout: list,
+        page_size: 10
+    },
+    source: {|buffer, position|
             scope variables
             | where name not-in ($env.ignore-env-vars? | default [])
             | sort-by var_id -r
             | where name =~ $buffer
             | each {|it| {value: $it.name description: $it.type} }
-        }}]
+        }
+}]
 
-$env.config.menus ++= [{name: pwd_history_menu, marker: "? ", only_buffer_difference: true, style: {text: green, selected_text: green_reverse}, type: {layout: list, page_size: 25}, source: {|buffer, position|
+$env.config.menus ++= [{
+    name: pwd_history_menu,
+    marker: "? ",
+    only_buffer_difference: true,
+    style: {
+        text: green,
+        selected_text: green_reverse
+    },
+    type: {
+        layout: list,
+        page_size: 25
+    },
+    source: {|buffer, position|
             history
             | select command exit_status cwd
             | where exit_status != 1
@@ -186,9 +337,23 @@ $env.config.menus ++= [{name: pwd_history_menu, marker: "? ", only_buffer_differ
             | each {|it| {value: $it.command } }
             | reverse
             | uniq
-        }}]
+        }
+}]
 
-$env.config.menus ++= [{name: current_session_menu, marker: "# ", only_buffer_difference: false, style: {text: green, selected_text: green_reverse, description_text: yellow}, type: {layout: list, page_size: 10}, source: {|buffer, position|
+$env.config.menus ++= [{
+    name: current_session_menu,
+    marker: "# ",
+    only_buffer_difference: false,
+    style: {
+        text: green,
+        selected_text: green_reverse,
+        description_text: yellow
+    },
+    type: {
+        layout: list,
+        page_size: 10
+    },
+    source: {|buffer, position|
             history -l
             | where session_id == (history session)
             | select command
@@ -196,9 +361,23 @@ $env.config.menus ++= [{name: current_session_menu, marker: "# ", only_buffer_di
             | each {|it| {value: $it.command } }
             | reverse
             | uniq
-        }}]
+        }
+}]
 
-$env.config.menus ++= [{name: pipe_completions_menu, marker: "# ", only_buffer_difference: false, style: {text: green, selected_text: green_reverse, description_text: yellow}, type: {layout: list, page_size: 25}, source: {|buffer, position|
+$env.config.menus ++= [{
+    name: pipe_completions_menu,
+    marker: "# ",
+    only_buffer_difference: false,
+    style: {
+        text: green,
+        selected_text: green_reverse,
+        description_text: yellow
+    },
+    type: {
+        layout: list,
+        page_size: 25
+    },
+    source: {|buffer, position|
 
             let esc_regex: closure = {|i|
                 let $input = $i
@@ -227,144 +406,898 @@ $env.config.menus ++= [{name: pipe_completions_menu, marker: "# ", only_buffer_d
             | reverse
             | uniq
             | each {|it| {value: $it}}
-        }}]
+        }
+}]
 
-$env.config.menus ++= [{name: working_dirs_cd_menu, marker: "? ", only_buffer_difference: true, style: {text: green, selected_text: green_reverse}, type: {layout: list, page_size: 23}, source: {|buffer, position|
+$env.config.menus ++= [{
+    name: working_dirs_cd_menu,
+    marker: "? ",
+    only_buffer_difference: true,
+    style: {
+        text: green,
+        selected_text: green_reverse
+    },
+    type: {
+        layout: list,
+        page_size: 23
+    },
+    source: {|buffer, position|
             open $nu.history-path
             | query db "SELECT DISTINCT(cwd) FROM history ORDER BY id DESC"
             | get CWD
             | where $it =~ $buffer
             | each {|it| {value: $it}}
-        }}]
+        }
+}]
 
 #keybidnings
 
-$env.config.keybindings ++= [{name: completion_next_menu, modifier: none, keycode: tab, event: {until: [{send: menu, name: completion_menu}, {send: menunext}, {edit: complete}]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: completion_next_menu,
+    modifier: none,
+    keycode: tab,
+    event: {
+        until: [
+            {
+                send: menu,
+                name: completion_menu
+            },
+            {
+                send: menunext
+            },
+            {
+                edit: complete
+            }
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: completion_previous_menu, modifier: shift, keycode: backtab, event: {send: menuprevious}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: completion_previous_menu,
+    modifier: shift,
+    keycode: backtab,
+    event: {
+        send: menuprevious
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: ide_completion_menu, modifier: control, keycode: char_n, event: {until: [{send: menu, name: ide_completion_menu}, {send: menunext}, {edit: complete}]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: ide_completion_menu,
+    modifier: control,
+    keycode: char_n,
+    event: {
+        until: [
+            {
+                send: menu,
+                name: ide_completion_menu
+            },
+            {
+                send: menunext
+            },
+            {
+                edit: complete
+            }
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: help_menu, modifier: none, keycode: "f1", event: {send: menu, name: help_menu}, mode: [emacs, vi_insert, vi_normal]}]
+$env.config.keybindings ++= [{
+    name: help_menu,
+    modifier: none,
+    keycode: "f1",
+    event: {
+        send: menu,
+        name: help_menu
+    },
+    mode: [
+        emacs,
+        vi_insert,
+        vi_normal
+    ]
+}]
 
-$env.config.keybindings ++= [{name: next_page_menu, modifier: control, keycode: char_x, event: {send: menupagenext}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: next_page_menu,
+    modifier: control,
+    keycode: char_x,
+    event: {
+        send: menupagenext
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: undo_or_previous_page_menu, modifier: control, keycode: char_z, event: {until: [{send: menupageprevious}, {edit: undo}]}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: undo_or_previous_page_menu,
+    modifier: control,
+    keycode: char_z,
+    event: {
+        until: [
+            {
+                send: menupageprevious
+            },
+            {
+                edit: undo
+            }
+        ]
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: escape, modifier: none, keycode: escape, event: {send: esc}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: escape,
+    modifier: none,
+    keycode: escape,
+    event: {
+        send: esc
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: cancel_command, modifier: control, keycode: char_c, event: {send: ctrlc}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: cancel_command,
+    modifier: control,
+    keycode: char_c,
+    event: {
+        send: ctrlc
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: quit_shell, modifier: control, keycode: char_d, event: {send: ctrld}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: quit_shell,
+    modifier: control,
+    keycode: char_d,
+    event: {
+        send: ctrld
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: clear_screen, modifier: control, keycode: char_l, event: {send: clearscreen}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: clear_screen,
+    modifier: control,
+    keycode: char_l,
+    event: {
+        send: clearscreen
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: search_history, modifier: control, keycode: char_q, event: {send: searchhistory}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: search_history,
+    modifier: control,
+    keycode: char_q,
+    event: {
+        send: searchhistory
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: open_command_editor, modifier: control, keycode: char_o, event: {send: openeditor}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: open_command_editor,
+    modifier: control,
+    keycode: char_o,
+    event: {
+        send: openeditor
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_up, modifier: none, keycode: up, event: {until: [[send]; [menuup], [up]]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_up,
+    modifier: none,
+    keycode: up,
+    event: {
+        until: [
+            [
+                        send
+            ];
+            [
+                menuup
+            ],
+            [
+                up
+            ]
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_down, modifier: none, keycode: down, event: {until: [[send]; [menudown], [down]]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_down,
+    modifier: none,
+    keycode: down,
+    event: {
+        until: [
+            [
+                        send
+            ];
+            [
+                menudown
+            ],
+            [
+                down
+            ]
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_left, modifier: none, keycode: left, event: {until: [[send]; [menuleft], [left]]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_left,
+    modifier: none,
+    keycode: left,
+    event: {
+        until: [
+            [
+                        send
+            ];
+            [
+                menuleft
+            ],
+            [
+                left
+            ]
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_right_or_take_history_hint, modifier: none, keycode: right, event: {until: [[send]; [historyhintcomplete], [menuright], [right]]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_right_or_take_history_hint,
+    modifier: none,
+    keycode: right,
+    event: {
+        until: [
+            [
+                        send
+            ];
+            [
+                historyhintcomplete
+            ],
+            [
+                menuright
+            ],
+            [
+                right
+            ]
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_one_word_left, modifier: control, keycode: left, event: {edit: movewordleft}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_one_word_left,
+    modifier: control,
+    keycode: left,
+    event: {
+        edit: movewordleft
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_one_word_right_or_take_history_hint, modifier: control, keycode: right, event: {until: [{send: historyhintwordcomplete}, {edit: movewordright}]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_one_word_right_or_take_history_hint,
+    modifier: control,
+    keycode: right,
+    event: {
+        until: [
+            {
+                send: historyhintwordcomplete
+            },
+            {
+                edit: movewordright
+            }
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_to_line_start, modifier: none, keycode: home, event: {edit: movetolinestart}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_to_line_start,
+    modifier: none,
+    keycode: home,
+    event: {
+        edit: movetolinestart
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_to_line_end_or_take_history_hint, modifier: none, keycode: end, event: {until: [{send: historyhintcomplete}, {edit: movetolineend}]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_to_line_end_or_take_history_hint,
+    modifier: none,
+    keycode: end,
+    event: {
+        until: [
+            {
+                send: historyhintcomplete
+            },
+            {
+                edit: movetolineend
+            }
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_to_line_end_or_take_history_hint, modifier: control, keycode: char_e, event: {until: [{send: historyhintcomplete}, {edit: movetoend}]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_to_line_end_or_take_history_hint,
+    modifier: control,
+    keycode: char_e,
+    event: {
+        until: [
+            {
+                send: historyhintcomplete
+            },
+            {
+                edit: movetoend
+            }
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_to_line_start, modifier: control, keycode: home, event: {edit: movetolinestart}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_to_line_start,
+    modifier: control,
+    keycode: home,
+    event: {
+        edit: movetolinestart
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_to_line_end, modifier: control, keycode: end, event: {edit: movetolineend}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_to_line_end,
+    modifier: control,
+    keycode: end,
+    event: {
+        edit: movetolineend
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_up, modifier: control, keycode: char_p, event: {until: [[send]; [menuup], [up]]}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_up,
+    modifier: control,
+    keycode: char_p,
+    event: {
+        until: [
+            [
+                        send
+            ];
+            [
+                menuup
+            ],
+            [
+                up
+            ]
+        ]
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: delete_one_character_backward, modifier: none, keycode: backspace, event: {edit: backspace}, mode: [emacs, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: delete_one_character_backward,
+    modifier: none,
+    keycode: backspace,
+    event: {
+        edit: backspace
+    },
+    mode: [
+        emacs,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: delete_one_word_backward, modifier: control, keycode: backspace, event: {edit: backspaceword}, mode: [emacs, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: delete_one_word_backward,
+    modifier: control,
+    keycode: backspace,
+    event: {
+        edit: backspaceword
+    },
+    mode: [
+        emacs,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: delete_one_character_forward, modifier: none, keycode: delete, event: {edit: delete}, mode: [emacs, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: delete_one_character_forward,
+    modifier: none,
+    keycode: delete,
+    event: {
+        edit: delete
+    },
+    mode: [
+        emacs,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: delete_one_character_forward, modifier: control, keycode: delete, event: {edit: delete}, mode: [emacs, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: delete_one_character_forward,
+    modifier: control,
+    keycode: delete,
+    event: {
+        edit: delete
+    },
+    mode: [
+        emacs,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: delete_one_character_backward, modifier: control, keycode: char_h, event: {edit: backspace}, mode: [emacs, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: delete_one_character_backward,
+    modifier: control,
+    keycode: char_h,
+    event: {
+        edit: backspace
+    },
+    mode: [
+        emacs,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: move_left, modifier: none, keycode: backspace, event: {edit: moveleft}, mode: vi_normal}]
+$env.config.keybindings ++= [{
+    name: move_left,
+    modifier: none,
+    keycode: backspace,
+    event: {
+        edit: moveleft
+    },
+    mode: vi_normal
+}]
 
-$env.config.keybindings ++= [{name: newline_or_run_command, modifier: none, keycode: enter, event: {send: enter}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: newline_or_run_command,
+    modifier: none,
+    keycode: enter,
+    event: {
+        send: enter
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: move_left, modifier: control, keycode: char_b, event: {until: [[send]; [menuleft], [left]]}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: move_left,
+    modifier: control,
+    keycode: char_b,
+    event: {
+        until: [
+            [
+                        send
+            ];
+            [
+                menuleft
+            ],
+            [
+                left
+            ]
+        ]
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: redo_change, modifier: control, keycode: char_g, event: {edit: redo}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: redo_change,
+    modifier: control,
+    keycode: char_g,
+    event: {
+        edit: redo
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: undo_change, modifier: control, keycode: char_z, event: {edit: undo}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: undo_change,
+    modifier: control,
+    keycode: char_z,
+    event: {
+        edit: undo
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: paste_before, modifier: control, keycode: char_y, event: {edit: pastecutbufferbefore}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: paste_before,
+    modifier: control,
+    keycode: char_y,
+    event: {
+        edit: pastecutbufferbefore
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: cut_word_left, modifier: control, keycode: char_w, event: {edit: cutwordleft}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: cut_word_left,
+    modifier: control,
+    keycode: char_w,
+    event: {
+        edit: cutwordleft
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: cut_line_to_end, modifier: control, keycode: char_k, event: {edit: cuttoend}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: cut_line_to_end,
+    modifier: control,
+    keycode: char_k,
+    event: {
+        edit: cuttoend
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: cut_line_from_start, modifier: control, keycode: char_u, event: {edit: cutfromstart}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: cut_line_from_start,
+    modifier: control,
+    keycode: char_u,
+    event: {
+        edit: cutfromstart
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: swap_graphemes, modifier: control_alt, keycode: char_t, event: {edit: swapgraphemes}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: swap_graphemes,
+    modifier: control_alt,
+    keycode: char_t,
+    event: {
+        edit: swapgraphemes
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: move_one_word_left, modifier: alt, keycode: left, event: {edit: movewordleft}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: move_one_word_left,
+    modifier: alt,
+    keycode: left,
+    event: {
+        edit: movewordleft
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: move_one_word_right_or_take_history_hint, modifier: alt, keycode: right, event: {until: [{send: historyhintwordcomplete}, {edit: movewordright}]}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: move_one_word_right_or_take_history_hint,
+    modifier: alt,
+    keycode: right,
+    event: {
+        until: [
+            {
+                send: historyhintwordcomplete
+            },
+            {
+                edit: movewordright
+            }
+        ]
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: move_one_word_left, modifier: alt, keycode: char_b, event: {edit: movewordleft}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: move_one_word_left,
+    modifier: alt,
+    keycode: char_b,
+    event: {
+        edit: movewordleft
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: delete_one_word_forward, modifier: alt, keycode: delete, event: {edit: deleteword}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: delete_one_word_forward,
+    modifier: alt,
+    keycode: delete,
+    event: {
+        edit: deleteword
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: delete_one_word_backward, modifier: alt, keycode: backspace, event: {edit: backspaceword}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: delete_one_word_backward,
+    modifier: alt,
+    keycode: backspace,
+    event: {
+        edit: backspaceword
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: delete_one_word_backward, modifier: alt, keycode: char_m, event: {edit: backspaceword}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: delete_one_word_backward,
+    modifier: alt,
+    keycode: char_m,
+    event: {
+        edit: backspaceword
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: cut_word_to_right, modifier: alt, keycode: char_d, event: {edit: cutwordright}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: cut_word_to_right,
+    modifier: alt,
+    keycode: char_d,
+    event: {
+        edit: cutwordright
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: upper_case_word, modifier: alt, keycode: char_u, event: {edit: uppercaseword}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: upper_case_word,
+    modifier: alt,
+    keycode: char_u,
+    event: {
+        edit: uppercaseword
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: lower_case_word, modifier: alt, keycode: char_l, event: {edit: lowercaseword}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: lower_case_word,
+    modifier: alt,
+    keycode: char_l,
+    event: {
+        edit: lowercaseword
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: capitalize_char, modifier: alt, keycode: char_c, event: {edit: capitalizechar}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: capitalize_char,
+    modifier: alt,
+    keycode: char_c,
+    event: {
+        edit: capitalizechar
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: copy_selection, modifier: control_shift, keycode: char_c, event: {edit: copyselection}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: copy_selection,
+    modifier: control_shift,
+    keycode: char_c,
+    event: {
+        edit: copyselection
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: cut_selection, modifier: control_shift, keycode: char_x, event: {edit: cutselection}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: cut_selection,
+    modifier: control_shift,
+    keycode: char_x,
+    event: {
+        edit: cutselection
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: select_all, modifier: control_shift, keycode: char_a, event: {edit: selectall}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: select_all,
+    modifier: control_shift,
+    keycode: char_a,
+    event: {
+        edit: selectall
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: move_to__start, modifier: control, keycode: char_a, event: {edit: movetostart}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: move_to__start,
+    modifier: control,
+    keycode: char_a,
+    event: {
+        edit: movetostart
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: insert_newline, modifier: alt, keycode: enter, event: {edit: insertnewline}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: insert_newline,
+    modifier: alt,
+    keycode: enter,
+    event: {
+        edit: insertnewline
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: paste, modifier: control_shift, keycode: char_v, event: {edit: pastecutbufferbefore}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: paste,
+    modifier: control_shift,
+    keycode: char_v,
+    event: {
+        edit: pastecutbufferbefore
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: vars_menu, modifier: alt, keycode: char_o, event: {send: menu, name: vars_menu}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: vars_menu,
+    modifier: alt,
+    keycode: char_o,
+    event: {
+        send: menu,
+        name: vars_menu
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: "pwd history", modifier: control, keycode: char_h, event: {send: menu, name: pwd_history_menu}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: "pwd history",
+    modifier: control,
+    keycode: char_h,
+    event: {
+        send: menu,
+        name: pwd_history_menu
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: current_session_menu, modifier: alt, keycode: char_r, event: {send: menu, name: current_session_menu}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: current_session_menu,
+    modifier: alt,
+    keycode: char_r,
+    event: {
+        send: menu,
+        name: current_session_menu
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: pipe_completions_menu, modifier: shift_alt, keycode: char_s, event: {send: menu, name: pipe_completions_menu}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: pipe_completions_menu,
+    modifier: shift_alt,
+    keycode: char_s,
+    event: {
+        send: menu,
+        name: pipe_completions_menu
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: working_dirs_cd_menu, modifier: alt_shift, keycode: char_r, event: {send: menu, name: working_dirs_cd_menu}, mode: emacs}]
+$env.config.keybindings ++= [{
+    name: working_dirs_cd_menu,
+    modifier: alt_shift,
+    keycode: char_r,
+    event: {
+        send: menu,
+        name: working_dirs_cd_menu
+    },
+    mode: emacs
+}]
 
-$env.config.keybindings ++= [{name: prompt_to_raw_string, modifier: control, keycode: char_v, event: {send: executehostcommand, cmd: "        let input = commandline;
+$env.config.keybindings ++= [{
+    name: prompt_to_raw_string,
+    modifier: control,
+    keycode: char_v,
+    event: {
+        send: executehostcommand,
+        cmd: "        let input = commandline;
         let hashes = $input | parse -r '(#+)' | get capture0 | sort -r | get 0? | default '';
         $\" r#($hashes)'($input)'#($hashes) | prompt \" | commandline edit -r $in
-"}, mode: [emacs, vi_normal, vi_insert]}]
+"
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: fzf_history_entries, modifier: control, keycode: char_f, event: {send: executehostcommand, cmd: "        let $index_sep = \"\\u{200C}\\t\"
+$env.config.keybindings ++= [{
+    name: fzf_history_entries,
+    modifier: control,
+    keycode: char_f,
+    event: {
+        send: executehostcommand,
+        cmd: "        let $index_sep = \"\\u{200C}\\t\"
         let $entry_sep = \"\\u{200B}\"
 
         open $nu.history-path
@@ -407,9 +1340,22 @@ $env.config.keybindings ++= [{name: fzf_history_entries, modifier: control, keyc
         | str trim
         | commandline edit --append $in
         | commandline set-cursor -e
-"}, mode: [emacs, vi_normal, vi_insert]}]
+"
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: fzf_history, modifier: alt, keycode: char_f, event: {send: executehostcommand, cmd: "        open $nu.history-path
+$env.config.keybindings ++= [{
+    name: fzf_history,
+    modifier: alt,
+    keycode: char_f,
+    event: {
+        send: executehostcommand,
+        cmd: "        open $nu.history-path
         | query db '
             WITH ordered_history AS (
                 SELECT command_line
@@ -430,9 +1376,22 @@ $env.config.keybindings ++= [{name: fzf_history, modifier: alt, keycode: char_f,
         | str trim
         | commandline edit --replace $in
         | commandline set-cursor -e
-"}, mode: [emacs, vi_normal, vi_insert]}]
+"
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: fzf_history_sessions, modifier: alt_control, keycode: char_f, event: {send: executehostcommand, cmd: "        open $nu.history-path
+$env.config.keybindings ++= [{
+    name: fzf_history_sessions,
+    modifier: alt_control,
+    keycode: char_f,
+    event: {
+        send: executehostcommand,
+        cmd: "        open $nu.history-path
         | query db -p [
             (commandline | split row -r $';(char nl)?' | str trim | compact --empty | to json)
         ] \"
@@ -459,11 +1418,42 @@ $env.config.keybindings ++= [{name: fzf_history_sessions, modifier: alt_control,
         | str trim
         | commandline edit -a $in
         | commandline set-cursor -e
-"}, mode: [emacs, vi_normal, vi_insert]}]
+"
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: copy_command, modifier: control_alt, keycode: char_c, event: {send: executehostcommand, cmd: "commandline | pbcopy; commandline edit --append ' # copied'"}, mode: [emacs, vi_normal, vi_insert]}]
+$env.config.keybindings ++= [{
+    name: copy_command,
+    modifier: control_alt,
+    keycode: char_c,
+    event: {
+        send: executehostcommand,
+        cmd: "commandline | pbcopy; commandline edit --append ' # copied'"
+    },
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 
-$env.config.keybindings ++= [{name: broot_path_completion, modifier: control, keycode: char_t, event: [[send, cmd]; [ExecuteHostCommand, "        let $cl = commandline
+$env.config.keybindings ++= [{
+    name: broot_path_completion,
+    modifier: control,
+    keycode: char_t,
+    event: [
+        [
+                send,
+                cmd
+        ];
+        [
+            ExecuteHostCommand,
+            "        let $cl = commandline
         let $pos = commandline get-cursor
 
         let $element = return-cline-element $cl $pos
@@ -483,7 +1473,15 @@ $env.config.keybindings ++= [{name: broot_path_completion, modifier: control, ke
         } else {
             $cl | str replace $element $broot_path | commandline edit -r $in
         }
-"]], mode: [emacs, vi_normal, vi_insert]}]
+"
+        ]
+    ],
+    mode: [
+        emacs,
+        vi_normal,
+        vi_insert
+    ]
+}]
 # Your old config is below. Uncomment what is needed, delete redundant.
 
 # # Nushell Config File
