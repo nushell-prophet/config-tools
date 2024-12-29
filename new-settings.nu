@@ -87,16 +87,16 @@ let $current_others = $env.config | select hooks menus keybindings | flatten-clo
 
 let $others = ''
     | append '#hooks'
-    | append $"$env.config.hooks = ($current_others.hooks | to nuon)"
+    | append $"$env.config.hooks = ($current_others.hooks | to nuon --indent 4)"
     | append "#menus"
     | append (
         $current_others.menus
-        | each { to nuon | $'$env.config.menus ++= [($in)]' }
+        | each { to nuon --indent 4 | $'$env.config.menus ++= [($in)]' }
     )
     | append "#keybidnings"
     | append (
         $current_others.keybindings
-        | each { to nuon | $'$env.config.keybindings ++= [($in)]' }
+        | each { to nuon --indent 4 | $'$env.config.keybindings ++= [($in)]' }
     )
     | str join "\n\n"
 
