@@ -20,7 +20,7 @@ let $defaults = nu -n -c $'$env.config = {}; ($source_code)'
 
 let $comparison = $defaults | join --outer $current key | where $it.default != $it.current
 
-$comparison | first 3 | print $in
+# $comparison | first 3 | print $in
 
 # print $'(ansi yellow)In your configuration, the following settings appear to be different than the defaults:(ansi reset)(char newline)'
 # print ($comparison | table -e)
