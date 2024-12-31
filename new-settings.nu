@@ -2,6 +2,7 @@ let $closure = {
     config flatten
     | transpose key value
     | where key !~ '^menu' and key !~ '^keybinding' and key !~ '^hooks'
+    | sort-by key
     | update value {
         if ($in | describe) == string and ($in starts-with '{') {
                 $"\u{200B}($in)\u{200B}"
