@@ -55,36 +55,7 @@ let changes = (
 
 # print $"\n\n(ansi yellow)Also compare your keybindings, menus, prompts, and other environment variables.(ansi reset)"
 
-try {stor delete --table-name settingsclosures}
-stor create --table-name settingsclosures --columns {uuid: str, closure: str}
-
-export def --env flatten-closures [] {
-    let $input = $in
-
-    let $type = $input | describe --detailed | get type
-
-    match $type {
-        'list' => {$input | each {flatten-closures}},
-        'record' => {
-            $input
-            | items {|k v| {$k: ($v | flatten-closures)}}
-            | into record
-        },
-        'closure' => {
-            let uuid = random uuid
-
-            (
-                {uuid: $uuid closure: (view source $input)}
-                | stor insert --table-name settingsclosures
-            )
-
-            $uuid
-        }
-        _ => $input
-    }
-}
-
-let $current_others = $env.config | select hooks menus keybindings | flatten-closures
+let $current_others = $env.config | select hooks menus keybindings
 
 let $current_others_nu = null
     | append '#hooks'
@@ -111,13 +82,6 @@ let $current_others_nu = null
     )
     | str join "\n\n"
 
-let $replacements = stor open
-    | query db 'select * from settingsclosures'
-    | update uuid {$'"($in)"'}
-
-let $other_settings = $replacements
-    | reduce --fold $current_others_nu {|i| str replace -a $i.uuid $i.closure}
-
 let $all_current_configs_commented = open $nu.config-path
     | lines
     | prepend "Your old config is below. Uncomment what is needed, delete redundant.\n"
@@ -126,7 +90,7 @@ let $all_current_configs_commented = open $nu.config-path
 let $new_config = 'config0101.nu'
 
 $changes
-| append $other_settings
+| append $current_others_nu
 | append $all_current_configs_commented
 | to text
 | save -f $new_config
