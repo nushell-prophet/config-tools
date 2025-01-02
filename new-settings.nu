@@ -86,18 +86,28 @@ export def --env flatten-closures [] {
 
 let $current_others = $env.config | select hooks menus keybindings | flatten-closures
 
-let $others = ''
+let $current_others_nu = null
     | append '#hooks'
-    | append $"$env.config.hooks = ($current_others.hooks | to nuon --indent 4)"
+    | append (
+        $current_others.hooks
+        | to nuon --indent 4
+        | $"$env.config.hooks = ($in)"
+    )
     | append "#menus"
     | append (
         $current_others.menus
-        | each { to nuon --indent 4 | $'$env.config.menus ++= [($in)]' }
+        | each {
+            to nuon --indent 4
+            | $'$env.config.menus ++= [($in)]'
+        }
     )
     | append "#keybidnings"
     | append (
         $current_others.keybindings
-        | each { to nuon --indent 4 | $'$env.config.keybindings ++= [($in)]' }
+        | each {
+            to nuon --indent 4
+            | $'$env.config.keybindings ++= [($in)]'
+        }
     )
     | str join "\n\n"
 
@@ -106,7 +116,7 @@ let $replacements = stor open
     | update uuid {$'"($in)"'}
 
 let $other_settings = $replacements
-    | reduce --fold $others {|i| str replace -a $i.uuid $i.closure}
+    | reduce --fold $current_others_nu {|i| str replace -a $i.uuid $i.closure}
 
 let $all_current_configs_commented = open $nu.config-path
     | lines
