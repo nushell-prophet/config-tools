@@ -14,6 +14,7 @@ $env.config.render_right_prompt_on_last_line = true
 $env.config.show_banner = false
 $env.config.table.header_on_separator = true
 $env.config.table.show_empty = false
+$env.config.use_ansi_coloring = "True"
 $env.config.use_kitty_protocol = true
 
 # The settings below don't have corresponding default values
@@ -105,8 +106,6 @@ $env.config.explore.status.error.fg = "white"
 $env.config.explore.status_bar_background.bg = "#C4C9C6"
 $env.config.explore.status_bar_background.fg = "#1D1F21"
 $env.config.table.trim.truncating_suffix = "..."
-
-
 
 #hooks
 
