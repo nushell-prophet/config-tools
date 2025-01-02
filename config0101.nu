@@ -14,7 +14,7 @@ $env.config.render_right_prompt_on_last_line = true
 $env.config.show_banner = false
 $env.config.table.header_on_separator = true
 $env.config.table.show_empty = false
-$env.config.use_ansi_coloring = "True"
+# $env.config.use_ansi_coloring = "True" # strange case appeared. Probably there is a bug in the code
 $env.config.use_kitty_protocol = true
 
 # The settings below don't have corresponding default values
@@ -1486,7 +1486,7 @@ $env.config.keybindings ++= [{
 # # Nushell Config File
 # #
 # # version = "0.100.0"
-# 
+#
 # # For more information on defining custom themes, see
 # # https://www.nushell.sh/book/coloring_and_theming.html
 # # And here is the theme collection
@@ -1557,7 +1557,7 @@ $env.config.keybindings ++= [{
 #     shape_vardecl: purple
 #     shape_raw_string: light_purple
 # }
-# 
+#
 # let light_theme = {
 #     # color for nushell primitives
 #     separator: dark_gray
@@ -1624,17 +1624,17 @@ $env.config.keybindings ++= [{
 #     shape_vardecl: purple
 #     shape_raw_string: light_purple
 # }
-# 
+#
 # # External completer example
 # # let carapace_completer = {|spans|
 # #     carapace $spans.0 nushell ...$spans | from json
 # # }
-# 
-# 
+#
+#
 # let carapace_completer = {|spans|
 #   # if the current command is an alias, get it's expansion
 #   let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
-# 
+#
 #   # overwrite
 #   let spans = (if $expanded_alias != null  {
 #     # put the first word of the expanded alias first in the span
@@ -1642,25 +1642,25 @@ $env.config.keybindings ++= [{
 #   } else {
 #     $spans
 #   })
-# 
+#
 #   carapace $spans.0 nushell ...$spans
 #   | from json
 # }
-# 
-# 
+#
+#
 # # The default config record. This is where much of your global configuration is setup.
 # $env.config = {
 #     show_banner: false # true or false to enable or disable the welcome banner at startup
-# 
+#
 #     ls: {
 #         use_ls_colors: true # use the LS_COLORS environment variable to colorize output
 #         clickable_links: true # enable or disable clickable links. Your terminal has to support links.
 #     }
-# 
+#
 #     rm: {
 #         always_trash: false # always act as if -t was given. Can be overridden with -p
 #     }
-# 
+#
 #     table: {
 #         mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
 #         index_mode: always # "always" show indexes, "never" show indexes, "auto" = show indexes when a table has "index" column
@@ -1674,9 +1674,9 @@ $env.config.keybindings ++= [{
 #         header_on_separator: true # show header text on separator/border line
 #         abbreviated_row_count: 12 # limit data rows from top and bottom after reaching a set point
 #     }
-# 
+#
 #     error_style: "fancy" # "fancy" or "plain" for screen reader-friendly error messages
-# 
+#
 #     # Whether an error message should be printed if an error of a certain kind is triggered.
 #     display_errors: {
 #         exit_code: false # assume the external command prints an error message
@@ -1684,7 +1684,7 @@ $env.config.keybindings ++= [{
 #         # The setting below controls message printing for termination by all other signals.
 #         termination_signal: true
 #     }
-# 
+#
 #     # datetime_format determines what a datetime rendered in the shell would look like.
 #     # Behavior without this configuration point will be to "humanize" the datetime display,
 #     # showing something like "a day ago."
@@ -1692,7 +1692,7 @@ $env.config.keybindings ++= [{
 #         # normal: '%a, %d %b %Y %H:%M:%S %z'    # shows up in displays of variables or other datetime's outside of tables
 #         # table: '%m/%d/%y %I:%M:%S%p'          # generally shows up in tabular outputs such as ls. commenting this out will change it to the default human readable datetime format
 #     }
-# 
+#
 #     explore: {
 #         status_bar_background: { fg: "#1D1F21", bg: "#C4C9C6" },
 #         command_bar_text: { fg: "#C4C9C6" },
@@ -1704,14 +1704,14 @@ $env.config.keybindings ++= [{
 #         },
 #             selected_cell: { bg: light_blue },
 #     }
-# 
+#
 #     history: {
 #         max_size: 200_000 # Session has to be reloaded for this to take effect
 #         sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
 #         file_format: "sqlite" # "sqlite" or "plaintext"
 #         isolation: true # only available with sqlite file_format. true enables history isolation, false disables it. true will allow the history to be isolated to the current session using up/down arrows. false will allow the history to be shared across all sessions.
 #     }
-# 
+#
 #     completions: {
 #         case_sensitive: false # set to true to enable case-sensitive completions
 #         quick: false    # set this to false to prevent auto-selecting completions when only one remains
@@ -1725,18 +1725,18 @@ $env.config.keybindings ++= [{
 #         }
 #         use_ls_colors: false # set this to true to enable file/path/directory completions using LS_COLORS
 #     }
-# 
+#
 #     filesize: {
 #         metric: false # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
 #         format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, auto
 #     }
-# 
+#
 #     cursor_shape: {
 #         emacs: line # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)
 #         vi_insert: block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (block is the default)
 #         vi_normal: underscore # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (underscore is the default)
 #     }
-# 
+#
 #     color_config: $dark_theme # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
 #     footer_mode: always # always, never, number_of_rows, auto
 #     float_precision: 2 # the precision for displaying floats in tables
@@ -1776,9 +1776,9 @@ $env.config.keybindings ++= [{
 #     use_kitty_protocol: true # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
 #     highlight_resolved_externals: true # true enables highlighting of external commands in the repl resolved by which.
 #     recursion_limit: 50 # the maximum number of times nushell allows recursion before stopping it
-# 
+#
 #     plugins: {} # Per-plugin configuration. See https://www.nushell.sh/contributor-book/plugins.html#configuration.
-# 
+#
 #     plugin_gc: {
 #         # Configuration for plugin garbage collection
 #         default: {
@@ -1793,12 +1793,12 @@ $env.config.keybindings ++= [{
 #             # }
 #         }
 #     }
-# 
+#
 #     hooks: {
 #         pre_prompt: [{ null }] # run before the prompt is shown
 #         pre_execution: [{ null }] # run before the repl input is run
 #         env_change: {
-# 
+#
 #       PWD: [
 #       { |before, after|
 #         #print $"before: [($before)], after: [($after)]"
@@ -1841,7 +1841,7 @@ $env.config.keybindings ++= [{
 #         }
 #       }
 #       ]
-# 
+#
 #         }
 #         display_output: {
 #             metadata access {|meta| match $meta.content_type? {
@@ -1852,11 +1852,11 @@ $env.config.keybindings ++= [{
 #         }
 #         | if (term size).columns >= 100 { table -e } else { table }
 #     }
-# 
+#
 #         # run to display the output of a pipeline
 #         command_not_found: { null } # return an error message when a command is not found
 #     }
-# 
+#
 #     menus: [
 #         # Configuration for default nushell menus
 #         # Note the lack of source parameter
@@ -1944,7 +1944,7 @@ $env.config.keybindings ++= [{
 #             }
 #         }
 #     ]
-# 
+#
 #     keybindings: [
 #         {
 #             name: completion_next_menu
@@ -2453,9 +2453,9 @@ $env.config.keybindings ++= [{
 #     }
 #     ]
 # }
-# 
-# 
-# 
+#
+#
+#
 # $env.config.menus ++= [
 #         {
 #             # List all unique successful commands
@@ -2481,10 +2481,10 @@ $env.config.keybindings ++= [{
 #             }
 #         }
 # ]
-# 
-# 
-# 
-# 
+#
+#
+#
+#
 # $env.config.keybindings ++= [
 #     {
 #         name: move_to__start
@@ -2508,7 +2508,7 @@ $env.config.keybindings ++= [{
 #         event: { edit: pastecutbufferbefore }
 #     }
 # ]
-# 
+#
 # # $env.config.menus ++= [
 # #     { # favorites
 # #         name: commands_menu
@@ -2542,7 +2542,7 @@ $env.config.keybindings ++= [{
 # #         event: { send: menu name: commands_menu }
 # #     }
 # # ]
-# 
+#
 # $env.config.menus ++= [
 #     {
 #         name: vars_menu
@@ -2575,8 +2575,8 @@ $env.config.keybindings ++= [{
 #         event: { send: menu name: vars_menu }
 #     }
 # ]
-# 
-# 
+#
+#
 # # $env.config.menus ++= [
 # #         {
 # #             name: commands_with_description
@@ -2611,9 +2611,9 @@ $env.config.keybindings ++= [{
 # #         event: { send: menu name: commands_with_description }
 # #     }
 # # ]
-# 
+#
 # ####
-# 
+#
 # $env.config.menus ++= [
 #     {
 #         # List all unique successful commands in the current directory
@@ -2649,9 +2649,9 @@ $env.config.keybindings ++= [{
 #         event: { send: menu name: pwd_history_menu }
 #     }
 # ]
-# 
+#
 # ####
-# 
+#
 # $env.config.menus ++= [
 #     {
 #         # session menu
@@ -2678,7 +2678,7 @@ $env.config.keybindings ++= [{
 #         }
 #     }
 # ]
-# 
+#
 # $env.config.keybindings ++= [
 #     {
 #         name: "current_session_menu"
@@ -2688,9 +2688,9 @@ $env.config.keybindings ++= [{
 #         event: { send: menu name: current_session_menu }
 #     }
 # ]
-# 
+#
 # ####
-# 
+#
 # $env.config.menus ++= [
 #     {
 #         # session menu
@@ -2707,22 +2707,22 @@ $env.config.keybindings ++= [{
 #             description_text: yellow
 #         }
 #         source: {|buffer, position|
-# 
+#
 #             let esc_regex: closure = {|i|
 #                 let $input = $i
 #                 let $regex_special_symbols = [\\, \., \^, "\\$", \*, \+, \?, "\\{", "\\}", "\\(", "\\)", "\\[", "\\]", "\\|", \/]
-# 
+#
 #                 $regex_special_symbols
 #                 | str replace '\' ''
 #                 | zip $regex_special_symbols
 #                 | reduce -f $input {|i acc| $acc | str replace -a $i.0 $i.1}
 #             }
-# 
+#
 #             let $segments = $buffer | split row -r '(\s\|\s)|\(|;|(\{\|\w\| )'
 #             let $last_segment = $segments | last
 #             let $last_segment_esc = do $esc_regex $last_segment
 #             let $smt = $buffer | str replace -r $'($last_segment_esc)$' ' '
-# 
+#
 #             history
 #             | get command
 #             | uniq
@@ -2747,9 +2747,9 @@ $env.config.keybindings ++= [{
 #         event: { send: menu name: pipe_completions_menu }
 #     }
 # ]
-# 
+#
 # ####
-# 
+#
 # $env.config.menus ++= [
 #     {
 #         # List all unique successful commands
@@ -2782,16 +2782,16 @@ $env.config.keybindings ++= [{
 #         event: { send: menu name: working_dirs_cd_menu}
 #     }
 # ]
-# 
+#
 # ####
-# 
+#
 # def prompt_to_raw_source [] {
 #     let $closure = {
 #         let input = commandline;
 #         let hashes = $input | parse -r '(#+)' | get capture0 | sort -r | get 0? | default '';
 #         $" r#($hashes)'($input)'#($hashes) | prompt " | commandline edit -r $in
 #     }
-# 
+#
 #     view source $closure | lines | skip | drop | to text
 # }
 # $env.config.keybindings ++= [
@@ -2806,9 +2806,9 @@ $env.config.keybindings ++= [{
 #         }
 #     }
 # ]
-# 
+#
 # ####
-# 
+#
 # $env.config.keybindings ++= [
 #     {
 #         name: fzf_history_entries
@@ -2841,7 +2841,7 @@ $env.config.keybindings ++= [{
 #         }
 #     }
 # ]
-# 
+#
 # # F1 is much better than this
 # #
 # # def help_source [] {
@@ -2853,7 +2853,7 @@ $env.config.keybindings ++= [{
 # #             nu --config '($nu.config-path)' --env-config '($nu.env-path)' -c \"help {..}\"
 # #         "
 # #     }
-# 
+#
 # #     view source $closure | lines | skip | drop | to text
 # # }
 # # $env.config.keybindings ++= [
@@ -2868,7 +2868,7 @@ $env.config.keybindings ++= [{
 # #         }
 # #     }
 # # ]
-# 
+#
 # $env.config.keybindings ++= [
 #     {
 #         name: copy_command
@@ -2881,7 +2881,7 @@ $env.config.keybindings ++= [{
 #         }
 #     }
 # ]
-# 
+#
 # # return an element from the given position of a command line
 # def return-cline-element [
 #     $cl: string
@@ -2897,26 +2897,26 @@ $env.config.keybindings ++= [{
 #     let $broot_closure = {
 #         let $cl = commandline
 #         let $pos = commandline get-cursor
-# 
+#
 #         let $element = return-cline-element $cl $pos
-# 
+#
 #         let $path_exp = $element
 #             | str trim -c '"'
 #             | str trim -c "'"
 #             | str trim -c '`'
 #             | if $in =~ '^~' { path expand } else {}
 #             | if ($in | path exists) {} else {'.'}
-# 
+#
 #         let $broot_path = ^broot $path_exp --conf ($env.XDG_CONFIG_HOME | path join broot select.hjson)
 #             | if ' ' in $in { $"`($in)`" } else {}
-# 
+#
 #         if $path_exp == '.' {
 #             commandline edit --insert $broot_path
 #         } else {
 #             $cl | str replace $element $broot_path | commandline edit -r $in
 #         }
 #     }
-# 
+#
 #     view source $broot_closure | lines | skip | drop | to text
 # }
 # $env.config.keybindings ++= [
@@ -2933,7 +2933,7 @@ $env.config.keybindings ++= [{
 #         ]
 #     }
 # ]
-# 
+#
 # # source /Users/user/git/nu_scripts/sourced/shorcuts.nu
 # # source /Users/user/git/nu_scripts/sourced/standard_4002.nu
 # source /Users/user/git/nu_scripts_upstream/custom-completions/zellij/zellij-completions.nu
@@ -2941,19 +2941,19 @@ $env.config.keybindings ++= [{
 # source /Users/user/.config/broot/launcher/nushell/br
 # source /Users/user/git/nu_scripts/sourced/standard_4002_aliasses.nu
 # # source ~/.cache/carapace/init.nu
-# 
+#
 # let closure1 = {|i| history | where command == $i | last | commandline edit -r $in}
-# 
+#
 # # use /Users/user/git/nu_scripts/modules/virtual_environments/conda.nu
-# 
+#
 # # use /Users/user/git/nu_scripts/sourced/gpt.nu
-# 
+#
 # use /Users/user/git/nu-goodies/nu-goodies *
 # use /Users/user/git/nushell-kv/kv.nu
 # use /Users/user/git/dotnu/dotnu
 # use /Users/user/git/numd/numd
 # use /Users/user/git/nushell-openai/openai.nu ask
-# 
+#
 # # overlay use /Users/user/git/cosmos-nushell/out/cyber/cyber_nu_completions.nu as cyber
 # # overlay hide cyber
 # # overlay use /Users/user/git/cosmos-nushell/out/gaiad/gaiad_nu_completions.nu as gaiad
@@ -2962,34 +2962,34 @@ $env.config.keybindings ++= [{
 # # overlay hide pussy
 # # overlay use /Users/user/git/cosmos-nushell/out/osmosisd/osmosisd_nu_completions.nu as osmosisd
 # # overlay hide osmosisd
-# 
+#
 # # overlay use /Users/user/cy/cy as cy -pr
 # # overlay use /Users/user/cy/cy/cy-full.nu as 'cy' -pr
 # # alias cr = overlay use -r /Users/user/cy/cy.nu as cy_no_prefix
 # # alias cr = overlay use -pr /Users/user/cy/cy as cy
-# 
+#
 # # cr
-# 
+#
 # use /Users/user/git/nu-cmd-stack/cmd-stack
 # use /Users/user/git/nushell-prophet-show/npshow
 # source /Users/user/git/my_nu_completions/my_nu_completions.nu
 # # alias code = ^/usr/local/bin/code
-# 
+#
 # # use /Users/user/git/manuscript/nuout.nu
-# 
+#
 # alias beep = say done
-# 
+#
 # $env.ignore-env-vars = (scope variables | get name)
-# 
+#
 # # use /Users/user/.config/broot/launcher/nushell/br *
 # # use /Users/user/git/darkdraw-ansi-ddw-converter/ddw.nu
 # # use /Users/user/temp/nushell-formatter *
 # def 'str escape-regex' [] {}
-# 
+#
 # def get-longest-hash-sym []: string -> string {parse -r '(#+)' | get capture0 | sort -r | get 0? | default ''}
-# 
+#
 # def make_raw_string []: string -> string {let $input = $in; let $hashes = $input | get-longest-hash-sym; $" r#($hashes)'($input)'#($hashes)"}
-# 
+#
 # # find the '^' prefixed current commandline in whole history; replace current commandline
 # def 'fzf-hist-current-commandline-prefix-replace' [] {
 #     let closure = {
@@ -3015,15 +3015,15 @@ $env.config.keybindings ++= [{
 #         | commandline edit --replace $in
 #         | commandline set-cursor -e
 #     }
-# 
+#
 #     view source $closure | lines | skip | drop | to text
 # }
-# 
+#
 # def 'fzf-hist-all-reverse-append' [] {
 #     let closure = {
 #         let $index_sep = "\u{200C}\t"
 #         let $entry_sep = "\u{200B}"
-# 
+#
 #         open $nu.history-path
 #         | query db '
 #             WITH ordered_history AS (
@@ -3065,10 +3065,10 @@ $env.config.keybindings ++= [{
 #         | commandline edit --append $in
 #         | commandline set-cursor -e
 #     }
-# 
+#
 #     view source $closure | lines | skip | drop | to text
 # }
-# 
+#
 # def 'fzf-hist-sessions-source-code' [] {
 #     let closure = {
 #         open $nu.history-path
@@ -3104,11 +3104,11 @@ $env.config.keybindings ++= [{
 #         | commandline edit -a $in
 #         | commandline set-cursor -e
 #     }
-# 
+#
 #     view source $closure | lines | skip | drop | to text
 # }
-# 
-# 
+#
+#
 # def 'fzf-hist-with-sessions-that-include-current-entry' [] {
 #     let closure = {
 #         open $nu.history-path
@@ -3139,10 +3139,10 @@ $env.config.keybindings ++= [{
 #         | commandline edit -a $in
 #         | commandline set-cursor -e
 #     }
-# 
+#
 #     view source $closure | lines | skip | drop | to text
 # }
-# 
+#
 # def lsg [] { }
-# 
+#
 # # make command to execute fzf menu, to ask what to do with current commandline
