@@ -1,6 +1,6 @@
 $env.config.history.file_format = "Sqlite"
 $env.config.history.isolation = true
-$env.config.history.max_size = 200000
+$env.config.history.max_size = 5000000
 
 $env.config.use_kitty_protocol = true
 
