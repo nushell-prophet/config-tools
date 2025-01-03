@@ -44,79 +44,79 @@ $env.config.hooks = {
         pre_execution: [{ null }] # run before the repl input is run
         env_change: {
 
-      PWD: [
-      { |before, after|
-        #print $"before: [($before)], after: [($after)]"
-        # print ($env.LS_COLORS)
-        print (ls | sort-by type name -i | grid -c -i )
-        # null
-      },
-      {
-        condition: {|_, after| not ($after | path join 'toolkit.nu' | path exists)}
-        code: "hide toolkit"
-        # code: "overlay hide --keep-env [ PWD ] toolkit"
-      },
-      {
-        condition: {|_, after| $after | path join 'toolkit.nu' | path exists}
-        code: "
-        print $'(ansi default_underline)(ansi default_bold)toolkit(ansi reset) module (ansi green_italic)detected(ansi reset)...'
-        print $'(ansi yellow_italic)activating(ansi reset) (ansi default_underline)(ansi default_bold)toolkit(ansi reset) module with `(ansi default_dimmed)(ansi default_italic)use toolkit.nu(ansi reset)`'
-        use toolkit.nu
-        # overlay use --prefix toolkit.nu
-        "
-      },
-      {|before, _|
-        if $before == null {
-            let file = ($nu.home-path | path join ".local" "share" "nushell" "startup-times.nuon")
-            if not ($file | path exists) {
-                mkdir ($file | path dirname)
-                touch $file
-            }
-            let ver = (version)
-            open $file | append {
-                date: (date now)
-                time: $nu.startup-time
-                build: ($ver.build_rust_channel)
-                allocator: ($ver.allocator)
-                version: ($ver.version)
-                commit: ($ver.commit_hash)
-                build_time: ($ver.build_time)
-                bytes_loaded: (view files | get size | math sum)
-            } | collect { save --force $file }
-        }
-      }
-      ]
+            PWD: [
+                {|before, after| print (ls | sort-by type name -i | grid -c -i ) },
+
+                {
+                      condition: {|_, after| not ($after | path join 'toolkit.nu' | path exists)}
+                      code: "hide toolkit"
+                      # code: "overlay hide --keep-env [ PWD ] toolkit"
+                },
+
+                {
+                      condition: {|_, after| $after | path join 'toolkit.nu' | path exists}
+                      code: "
+                      print $'(ansi default_underline)(ansi default_bold)toolkit(ansi reset) module (ansi green_italic)detected(ansi reset)...'
+                      print $'(ansi yellow_italic)activating(ansi reset) (ansi default_underline)(ansi default_bold)toolkit(ansi reset) module with `(ansi default_dimmed)(ansi default_italic)use toolkit.nu(ansi reset)`'
+                      use toolkit.nu
+                      # overlay use --prefix toolkit.nu
+                      "
+                },
+
+                {|before, _|
+                    if $before == null {
+                        let file = ($nu.home-path | path join ".local" "share" "nushell" "startup-times.nuon")
+                        if not ($file | path exists) {
+                            mkdir ($file | path dirname)
+                            touch $file
+                        }
+                        let ver = (version)
+                        open $file | append {
+                            date: (date now)
+                            time: $nu.startup-time
+                            build: ($ver.build_rust_channel)
+                            allocator: ($ver.allocator)
+                            version: ($ver.version)
+                            commit: ($ver.commit_hash)
+                            build_time: ($ver.build_time)
+                            bytes_loaded: (view files | get size | math sum)
+                        } | collect { save --force $file }
+                    }
+                }
+            ]
 
         }
+
         display_output: {
-            metadata access {|meta| match $meta.content_type? {
-            "application/x-nuscript" | "application/x-nuon" | "text/x-nushell" => { nu-highlight },
-            "application/json" => { ^bat --language=json --color=always --style=plain --paging=never },
-            _ => {},
+            metadata access {|meta|
+                match $meta.content_type? {
+                    "application/x-nuscript" | "application/x-nuon" | "text/x-nushell" => { nu-highlight },
+                    "application/json" => { ^bat --language=json --color=always --style=plain --paging=never },
+                    _ => {},
+                }
             }
+            | if (term size).columns >= 100 { table -e } else { table }
         }
-        | if (term size).columns >= 100 { table -e } else { table }
-    }
 
         # run to display the output of a pipeline
         command_not_found: { null } # return an error message when a command is not found
     }
 
 $env.config.keybindings ++= [
-        {
-            name: ide_completion_menu
-            modifier: control
+    {
+        name: ide_completion_menu
+        modifier: control
 #            keycode: space
-            keycode: char_n
-            mode: [emacs vi_normal vi_insert]
-            event: {
-                until: [
-                    { send: menu name: ide_completion_menu }
-                    { send: menunext }
-                    { edit: complete }
-                ]
-            }
+        keycode: char_n
+        mode: [emacs vi_normal vi_insert]
+        event: {
+            until: [
+                { send: menu name: ide_completion_menu }
+                { send: menunext }
+                { edit: complete }
+            ]
         }
+    }
     {
         name: move_to_line_end_or_take_history_hint
         modifier: control
@@ -175,9 +175,6 @@ $env.config.keybindings ++= [
         event: { edit: selectall }
     }
 ]
-
-
-
 
 $env.config.menus ++= [
         {
