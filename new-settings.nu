@@ -61,14 +61,14 @@ let $current_others_nu = null
     | append '#hooks'
     | append (
         $current_others.hooks
-        | to nuon --indent 4
+        | to nuon --serialize --indent 4
         | $"$env.config.hooks = ($in)"
     )
     | append "#menus"
     | append (
         $current_others.menus
         | each {
-            to nuon --indent 4
+            to nuon --serialize --indent 4
             | $'$env.config.menus ++= [($in)]'
         }
     )
@@ -76,7 +76,7 @@ let $current_others_nu = null
     | append (
         $current_others.keybindings
         | each {
-            to nuon --indent 4
+            to nuon --serialize --indent 4
             | $'$env.config.keybindings ++= [($in)]'
         }
     )
