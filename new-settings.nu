@@ -14,7 +14,9 @@ let $closure = {
 let $source_code = view source $closure | lines | skip | drop | to text
 
 let $current = do $closure | ansi strip | from nuon | rename key current
-let $defaults = nu -n -c $'$env.config = {}; ($source_code)'
+let $defaults = nu -n -c $'
+    $env.config = {}; ($source_code)
+    '
     | from nuon
     | rename key default
     | where key != 'table.trim.wrapping_try_keep_words' # produces error in my testing environment
