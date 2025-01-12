@@ -1,3 +1,4 @@
+# this command is saved as closure for using inside of every nushell instance
 let $closure = {
     config flatten
     | transpose key value
